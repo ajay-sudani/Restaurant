@@ -22,7 +22,7 @@ angular
   	navigator.geolocation.getCurrentPosition(function(position){
       $scope.$apply(function(){
 	  	$scope.position = position;
-        codeLatLng(position.coords.latitude,position.coords.longitude);
+        // codeLatLng(position.coords.latitude,position.coords.longitude);
       });
     });
 
