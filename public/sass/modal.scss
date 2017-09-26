@@ -1,0 +1,491 @@
+$brand_color: #FF7538;
+.modal {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: none;
+    z-index: -1;
+    padding: 15px;
+    transition: z-index 0s ease 0.5s, all 0.5s ease 0s;
+    overflow: hidden;
+    &.edit-modal {
+        padding: 0px;
+    }
+    @media screen and (max-width: 480px) {
+        padding: 0px;
+    }
+    &.active {
+        opacity: 1;
+        z-index: 9999;
+        display: block;
+        transition: all 0.5s ease 0s;
+    }
+    .scroll {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        @media screen and (max-width: 768px){
+          padding: 0;
+        }
+    }
+    .box {
+        width: 100%;
+        max-height: none;
+        top: 0px;
+        transform: none;
+        background: #fff;
+        margin: 20px auto;
+        position: relative;
+        border-radius: 3px;
+        z-index: 2;
+        padding: 20px 0px;
+        margin:auto;
+        @media screen and (max-width: 479px) {
+            max-width: 100% !important;
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+            height: 100%;
+            padding: 0;
+            overflow: auto;
+        }
+        .close {
+            position: static;
+            float: none;
+            &:hover {
+                svg {
+                    path {
+                        fill: #000;
+                    }
+                }
+            }
+            &.icon {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                z-index: 10;
+                cursor: pointer;
+                svg {
+                    height: 16px;
+                    width: 16px;
+                    fill: rgb(204, 204, 204);
+                }
+                &.highlighted {
+                    svg {
+                        path {
+                            fill: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .background {
+        top: 0px;
+        left: 0px;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        z-index: 1;
+        /*position: absolute;*/
+        height: 100%;
+        position: fixed;
+    }
+    &.date-modal {
+        padding: 10px;
+        .box {
+            max-width: 768px;
+            @media screen and (max-width: 480px) {
+                max-width: none !important;
+                max-height: none;
+                height: auto;
+                width: auto;
+            }
+            .bootstrap-date-input {
+                border: 0px;
+                padding: 0px;
+                margin: 40px 0px 0px;
+            }
+        }
+    }
+    &.invite-modal {
+        .box {
+            max-width: 990px;
+            padding: 15px;
+            @media screen and (max-width: 1199px) {
+                max-width: 830px;
+            }
+            @media screen and (max-width: 979px) {
+                max-width: 660px;
+            }
+            .stump-autocomplete {
+                .item-content {
+                    .icon {
+                        position: static;
+                    }
+                    ul {
+                        li {
+                            .icon {
+                                svg {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.invite-modal-new {}
+    &.generate-list {
+        .box {
+            max-width: 960px;
+            padding: 50px 30px 30px;
+            .close {
+                top: 10px;
+                /*right: 35px;*/
+                height: 22px;
+                width: 22px;
+                svg {
+                    height: 22px;
+                    width: 22px;
+                }
+            }
+            .box-header {}
+        }
+    }
+    &.edit-modal {
+        .box {
+            @media screen and (max-width: 768px) {
+                max-width: 100% !important;
+                width: 100%;
+                margin: 0;
+                border-radius: 0;
+                height: 100%;
+                padding: 0;
+                overflow: auto;
+            }
+        }
+    }
+}
+.edit-modal{
+    .advanced-settings{
+        .items{
+            .f-admin-row{
+                padding: 15px;
+                border: 1px solid #dadada;
+                border-radius: 3px;
+                margin: 20px;
+                position: relative;
+                h3{
+                  font-weight: bold;
+                  font-size: 20px;
+                  margin-bottom: 10px;
+                }
+                .action{
+                    .instruction{
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: calc(100% - 85px);
+                        padding-right: 10px;
+                        color: #585858;
+                    }
+                    button{
+                        display: inline-block;
+                        vertical-align: middle;
+                        min-width: 80px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
+    .box-heading {
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        max-width: 800px;
+        background: white;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+        left: calc(50% - 8px);
+        transform: translateX(-50%);
+        padding: 10px 15px;
+        @media screen and (max-width: 799px) {
+            left: 0px;
+            transform: none;
+        }
+        .save-btn {
+            float: left;
+            .btn {
+                width: 60px;
+                height: 31px;
+                color: $brand_color;
+                padding: 5px 10px !important;
+                margin: 0px;
+                border-radius: 3px;
+                display: inline-block;
+                border: 1px solid $brand_color;
+                font-size: 16px;
+                &:hover {
+                    background-color: $brand_color !important;
+                    color: white;
+                }
+            }
+        }
+        .close {
+            float: right;
+            position: static !important;
+            margin-top: 7px;
+            display: block;
+            svg {
+                height: 20px;
+                width: 20px;
+            }
+            &:hover {
+                svg {
+                    path {
+                        fill: $brand_color !important;
+                    }
+                }
+            }
+        }
+    }
+    .scroll {
+        .box {
+            max-width: 760px;
+            background: #fff;
+            max-height: initial;
+            top: 0;
+            transform: translateY(0);
+            padding: 0px;
+            /*overflow: hidden;*/
+            overflow: auto;
+            .icon {
+                top: 13px;
+                right: 15px;
+            }
+            @media screen and (max-width: 768px) {
+                max-width: 100% !important;
+            }
+            .cover-image {
+                padding-top: 51px;
+                @media screen and (max-width: 768px) {
+                    padding-top: 58px;
+                }
+            }
+            .camera {
+                position: static;
+            }
+        }
+        &.active {
+            position: absolute;
+        }
+        .background {
+            position: fixed;
+        }
+    }
+}
+.create-group {
+
+}
+.create-group {
+  .box {
+    max-width: 940px;
+    min-height: 450px;
+    padding: 20px !important;
+    background: #f5f7fa !important;
+    position: relative;
+  }
+  .progress {
+    .progressbar {
+      li {
+        width: 33.33%;
+      }
+    }
+    .items {
+      .item {
+        .content {
+            h3{
+              text-align: center;
+              font-size: 22px;
+            }
+            .stump-form {
+              .form {
+                background: #f5f7fa;
+                input {
+                    background: #f5f7fa;
+                }
+                .textarea-group {
+                  label {
+                    line-height: 30px;
+                  }
+                  textarea {
+                    width: 650px;
+                    height: 200px;
+                    line-height: 30px;
+                    background: none;
+                    border-radius: 3px;
+                    resize: none;
+                    font-size: 16px;
+                    padding: 0 10px;
+                }
+              }
+              .input-file-box {
+                position: relative;
+                margin-bottom: 10px;
+                input {
+                  position: absolute;
+                  top: 0;
+                  left: 115px;
+                  opacity: 0;
+                  width: 80px;
+                }
+                .choose-file-button {
+                  display: inline-block;
+                  border: 1px solid #ccc;
+                  padding: 5px;
+                  margin-top: -5px;
+                  margin-left: 5px;
+                  border-radius: 3px;
+                  box-shadow: 0px 0px 5px 1px #ccc;
+                }
+              }
+            }
+          }
+          .bottom{
+            position: absolute;
+            width: calc(100% - 40px);
+            bottom:0;
+            padding-bottom: 20px;
+            max-width: initial;
+          }
+        }
+      }
+    }
+  }
+}
+.user-modal {
+    .scroll {
+        .box {
+            .icon {
+                &.close {
+                    top: 14px;
+                    left: 13px;
+                    right: initial;
+                    height: 20px;
+                    width: 20px;
+                    svg {
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+.restaurant-modal {
+    .box {
+        max-width: 800px;
+        background: #f5f7fa;
+        .content {
+            padding-top: 0px;
+            padding-bottom: 20px;
+            >h3 {
+                font-size: 24px;
+                font-weight: bold;
+                padding: 0px 0px 10px;
+                text-align: center;
+                display: none;
+                @media screen and (max-width: 480px) {
+                    display: block;
+                }
+            }
+        }
+        .message-block {
+            padding: 20px 0 10px;
+            h3 {
+                text-align: center;
+                font-size: 16px;
+                .close {
+                    &:after {
+                        content: none;
+                        display: none;
+                    }
+                }
+                button {
+                    color: #000;
+                    &:hover {
+                        color: $brand_color;
+                        background: none;
+                    }
+                    ;
+                }
+            }
+        }
+    }
+    .progress .progressbar {
+        @media screen and (max-width: 480px) {
+            li {
+                visibility: hidden;
+                &:after {
+                    visibility: visible;
+                }
+                &:before {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    .stump-form {
+        max-width: 400px;
+        margin: 0px auto;
+        text-align: left;
+        label {
+            text-align: left;
+        }
+        .form {
+            background: transparent;
+            padding: 0px 20px 0px;
+            .mobile {
+                display: block;
+            }
+            .email {
+                display: none;
+            }
+            .method-email {
+                .mobile {
+                    display: none;
+                }
+                .email {
+                    display: block;
+                }
+            }
+            .input {
+                &.switch-email {
+                    margin: 0;
+                    padding: 10px 0;
+                    .switch {
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        &:hover {
+                            color: $brand_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

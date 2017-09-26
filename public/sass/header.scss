@@ -1,0 +1,609 @@
+$brand_color: #FF7538;
+.restaurant{
+  header{
+    padding: 15px 0px;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+    @media screen and (max-width: 1199px) {
+        padding: 15px 0px;
+    }
+    .container{
+        max-width: 100%;
+    }
+    .bubble{
+        position: absolute;
+        display: inline-block;
+        font-size: 16px;
+        color: #ffffff;
+        border-radius: 100%;
+        width: 7px;
+        height: 7px;
+        vertical-align: middle;
+        -webkit-animation-name: infinite-background;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-play-state: running;
+        animation-name: infinite-background;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        top: -4px;
+        right: -6px;
+    }
+    .left{
+        float: left;
+        width: auto;
+        position: relative;
+        @media screen and (max-width: 979px) {
+            width: 100%;
+        }
+        &.invitation-count{
+          .bubble{
+            top: -2px;
+            left: 36px;
+            z-index: 1;
+          }
+        }
+        .logo{
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            display: inline-block;
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 0px;
+            line-height: 32px;
+            border: 2px solid #000;
+            position: relative;
+            cursor: pointer;
+            &:hover{
+                border: 2px solid $brand_color;
+                color: $brand_color;
+            }
+            &.highlighted{
+                border: 2px solid $brand_color;
+                color: $brand_color;
+            }
+        }
+        .filter-option-buttons{
+            padding: 20px 25px;
+            display: none;
+            .filter-option-arrow-holder{
+                display: inline-block;
+                float: left;
+                margin-top: -12px;
+                height: 50px;
+                width: 50px;
+                .arrow{
+                    left: -8px;
+                    ms-transform:rotate(45deg) translate(-5px, -5px);
+                    -moz-transform: rotate(45deg) translate(-5px, -5px);
+                    -o-transform: rotate(45deg) translate(-5px, -5px);
+                    -webkit-transform: rotate(45deg) translate(-5px, -5px);
+                    transform: rotate(45deg) translate(-5px, -5px);
+                    &:before{
+                        -ms-transform:translate(10px, 0);
+                        -moz-transform: translate(10px, 0);
+                        -o-transform: translate(10px, 0);
+                        -webkit-transform: translate(10px, 0);
+                        transform: translate(10px, 0);
+                    }
+                    &:after{
+                        -ms-transform:rotate(90deg) translate(10px, 0);
+                        -moz-transform: rotate(90deg) translate(10px, 0);
+                        -o-transform: rotate(90deg) translate(10px, 0);
+                        -webkit-transform: rotate(90deg) translate(10px, 0);
+                        transform: rotate(90deg) translate(10px, 0);
+                    }
+                }
+            }
+            .clear-btn{
+                display: inline-block;
+                float: right;
+            }
+            @media screen and (max-width: 767px) {
+                display: block;
+            }
+        }
+        .left-container{
+            display: inline-block;
+            @media screen and (max-width: 979px) {
+                width: calc(100% - 85px);
+                margin-left: 40px;
+                &.without-arrow{
+                    width: calc(100% - 50px);
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    .right{
+        float: right;
+        @media screen and (max-width: 979px) {
+            float: none;
+            width: 100%;
+        }
+        .arrow-holder{
+            @media screen and (max-width: 979px) {
+                display: inline-block;
+                position: absolute;
+                left: 15px;
+                width: 85px;
+            }
+            .logo{
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                display: inline-block;
+                font-size: 25px;
+                font-weight: bold;
+                margin-top: 0px;
+                line-height: 32px;
+                border: 2px solid #000;
+                position: relative;
+                cursor: pointer;
+                .bubble{
+                    top: -4px;
+                    right: -4px;
+                }
+            }
+            .arrow{
+                left: 4px;
+                @media screen and (max-width: 767px) {
+                    margin-left:0px;
+                }
+            }
+        }
+        .nav-menu{
+          button{
+            display: inline-block;
+            margin-right: 5px;
+            position: relative;
+          }
+        }
+        nav{
+            height: auto;
+            right: 0px;
+            background: #fff;
+            @media screen and (max-width: 979px) {
+                overflow: hidden;
+                position: absolute;
+                top: 55px;
+                background: #fff;
+                width: 100%;
+                z-index: 3;
+                max-height: 0px;
+                left: 0px;
+                box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08);
+            }
+            &.active{
+                max-height: 500px;
+                @media screen and (max-width: 979px) {
+                    width:100%;
+                    right: initial;
+                    left: 0px;
+                }
+            }
+        }
+        &.active{
+            nav{
+                right: 0px;
+                max-height: 600px;
+                overflow: hidden;
+            }
+        }
+        &.active{
+            > ul{
+                > li{
+                    &.sign-up{
+                        display:none;
+                    }
+                    &.login{
+                        display:none;
+                    }
+                    &.profile-menu-button{
+                        display: inline-block;
+                    }
+                    @media screen and (max-width: 979px) {
+                        &.sign-up{
+                            display:block;
+                        }
+                        &.login{
+                            display:block;
+                        }
+                        &.profile-menu-button{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    nav{
+        right:-320px;
+        height: 100vh;
+        top: 0px;
+        background: #f7f7f7;
+        z-index: 10;
+        @media screen and (max-width: 767px) {
+            right:-270px;
+            height: 100vh;
+            width: 250px;
+        }
+        .close{
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+            top: 10px;
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+            &:hover{
+                svg{
+                    path{
+                        fill:$brand_color;
+                    }
+                }
+            }
+            &.highlighted{
+                svg{
+                    path{
+                        fill:$brand_color;
+                    }
+                }
+            }
+        }
+         > ul{
+            > li{
+                list-style: none;
+                display: inline-block;
+                // padding: 10px 5px 0px;
+                padding: 10px 5px;
+                position: relative;
+                @media screen and (max-width: 1199px) {
+                    padding: 10px 8px;
+                }
+                @media screen and (max-width: 979px) {
+                    padding: 15px 15px;
+                    display:block;
+                }
+                button{
+                    font-weight: 500;
+                    display: block;
+                    &:after{
+                        content:'';
+                        display:block;
+                        height: 4px;
+                        width: 0px;
+                        background: $brand_color;
+                        transition: all 0.5s ease 0s;
+                        margin-top: 5px;
+                        position: absolute;
+                        @media screen and (max-width: 979px) {
+                            display: none;
+                        }
+                    }
+                    .profile{
+                        float: right;
+                        cursor: pointer;
+                        .img{
+                            display: inline-block;
+                            max-width: 40px;
+                            border-radius: 100%;
+                            overflow: hidden;
+                            vertical-align: middle;
+                            height: 40px;
+                            width: 40px;
+                            background: rgba(230, 224, 224, 0.22);
+                            .profile-name{
+                                font-size: 20px;
+                                color:$brand_color;
+                                line-height: 40px;
+                            }
+                        }
+                        .name{
+                            display: inline-block;
+                            vertical-align: middle;
+                            color: #fff;
+                            margin-left: 5px;
+                        }
+                    }
+                    &:hover{
+                        color: $brand_color !important;
+                        background: none !important;
+                        &:after{
+                            width: 100%;
+                        }
+                        .arrow{
+                            &:after{
+                                background: $brand_color;
+                            }
+                            &:before{
+                                background: $brand_color;
+                            }
+                        }
+                    }
+                    &.highlighted{
+                        color: $brand_color;
+                        &:after{
+                            width: 100%;
+                        }
+                        .arrow{
+                            &:after{
+                                background: $brand_color;
+                            }
+                            &:before{
+                                background: $brand_color;
+                            }
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                }
+                &.mobile{
+                    display: none;
+                    @media screen and (max-width: 979px) {
+                        display:block;
+                    }
+                }
+                &.profile-menu-button{
+                    display: inline-block;
+                    padding: 0;
+                    padding-right: 13px;
+                    height: 40px;
+
+                    // @media screen and (max-width: 979px) {
+                    //     display: none;
+                    //     padding: 0px 10px !important;
+                    //     margin-top: 5px;
+                    // }
+                    button{
+                        &:after{
+                            display:none;
+                        };
+                    }
+                }
+            }
+        }
+        .submenu{
+            position: absolute;
+            top: 50px;
+            right: 0;
+            width: 200px;
+            background: #fff;
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+            max-height: 0px;
+            overflow: hidden;
+            z-index: 2;
+            ul{
+                li{
+                    list-style: none;
+                    display: block;
+                    padding: 10px 15px 10px;
+                    position: relative;
+                }
+            }
+            &.active{
+                max-height: 300px;
+            }
+        }
+        &.active{
+            > ul{
+                > li{
+                    &.sign-up{
+                        display:none;
+                    }
+                    &.login{
+                        display:none;
+                    }
+                    &.profile-menu-button{
+                        display: inline-block;
+                    }
+                    @media screen and (max-width: 979px) {
+                        &.sign-up{
+                            display:block;
+                        }
+                        &.login{
+                            display:block;
+                        }
+                        &.profile-menu-button{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .top-btn{
+        padding: 0;
+    }
+    &.active.header-fix{
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        background: #fff;
+        padding: 10px 0px 10px;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+        @media screen and (max-width: 1199px) {
+            // padding: 10px 0 0;
+            padding:10px 0;
+        }
+        @media screen and (max-width: 979px) {
+            padding:10px 0;
+        }
+        .nav-bar{
+            .right{
+                .nav-menu{
+                    @media screen and (max-width: 979px) {
+                        // margin-top: -7px;
+                    }
+                }
+            }
+        }
+    }
+    &.addnew-seven{
+        z-index: 10;
+        .left{
+            position: absolute;
+        }
+        @media screen and (max-width: 979px) {
+            padding: 10px 0 !important;
+            .left{
+                display: none;
+            }
+        }
+        .header-bar{
+            .right{
+                .arrow-holder{
+                    position: static;
+                    width: auto;
+                    float: left;
+                    .logo{
+                        &:hover{
+                            color:$brand_color;
+                            border-color: $brand_color;
+                        }
+                    }
+                }
+                .add-listing{
+                    position: static;
+                    max-height: none;
+                    float: right;
+                    width: auto;
+                    box-shadow: none;
+                    @media screen and (max-width: 768px) {
+                        margin: 0 !important;
+                    }
+                    ul{
+                        li{
+                            list-style-type: none;
+                            display: inline-block;
+                            padding: 12px 0px 0px 10px;
+                            vertical-align: bottom;
+                            @media screen and (max-width: 1199px){
+                                padding: 10px 8px;
+                            }
+                            @media screen and (max-width: 979px){
+                                vertical-align: middle;
+                            }
+                            button{
+                                &:after{
+                                    content:'';
+                                    display:block;
+                                    height: 4px;
+                                    width: 0px;
+                                    background: $brand_color;
+                                    transition: all 0.5s ease 0s;
+                                    margin-top: 5px;
+                                    @media screen and (max-width: 979px) {
+                                        display: none;
+                                    }
+                                }
+                                &:hover{
+                                    color:$brand_color;
+                                    background: none;
+                                    &:after{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .status-message{
+                                font-size: 13px;
+                                color: #ccc;
+                                margin-top: -25px;
+                                display: block;
+                                @media screen and (max-width: 979px) {
+                                    margin-top: 0px;
+                                }
+                                @media screen and (max-width: 479px){
+                                    max-width: 80px;
+                                }
+                            }
+                            .save-spinner{
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 979px) {
+                        > ul{
+                            margin-top: 7px;
+                            > li{
+                                padding: 0px 5px 0;
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 768px) {
+                        > ul{
+                            > li{
+                                padding: 0 5px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.header-fix{
+        position: fixed;
+    }
+    &.header-without-search{
+      .right{
+        .nav-menu{
+          @media screen and (max-width:979px) and (min-width: 479px) {
+               overflow: visible;
+          }
+        }
+      }
+      @media screen and (max-width:979px) and (min-width: 479px){
+        .left{
+            width: auto;
+        }
+        .right{
+            float: right;
+            width: auto;
+            .arrow-holder{
+                display: none;
+            }
+            .nav-menu{
+                position: static;
+                background: #fff;
+                max-height: none;
+                box-shadow: none;
+                ul{
+                    li{
+                        display: inline-block;
+                        padding: 10px 8px;
+                        &.mobile{
+                            display: none;
+                        }
+                    }
+                }
+                .submenu{
+                  li{
+                    list-style: none;
+                    display: block;
+                    padding: 10px 15px 10px;
+                    position: relative;
+                  }
+                }
+                .profile-menu-button{
+                  padding: 0;
+                }
+            }
+        }
+        .nav-bar>.right>.nav-menu>ul{
+          padding-top: 0;
+        }
+      }
+    }
+    .nav-bar>.right>.nav-menu>ul{
+      @media screen and (max-width: 979px){
+        padding-top: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,240 @@
+<div id="map"></div>
+<div class="restaurant no-touch discovery-page">
+        <header class="header-fix header-with-search">
+            <div class="container clearfix">
+                <div class="nav-bar">
+                    <div class="left">
+                        <span class="logo">
+                            R
+                        </span>
+                        <div class="left-container">
+                            <div class="mobile-filter">
+                                <div class="filter-text">
+                                    <h2>Restaurants</h2>
+                                </div>
+                            </div>
+                            <div class="filter-area">               
+                                <div class="filter-option">
+                                    <div class="filter-option-buttons">
+                                        <div class="filter-option-arrow-holder">
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <div class="clear-btn">
+                                            <button>Clear All</button>
+                                        </div>
+                                    </div>
+                                    <div class="filter-items clearfix">
+                                        <div class="filter-item place item-place">
+                                            <div class="select">
+                                                <div class="icon">
+                                                    <svg enable-background="new 0 0 96 96" height="96px" id="magnifying_glass" version="1.1" viewBox="0 0 96 96" width="96px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M90.63,84.971l-22.5-22.5C73.05,56.311,76,48.5,76,40C76,20.12,59.88,4,40,4S4,20.12,4,40  s16.12,36,36,36c8.5,0,16.311-2.95,22.471-7.87l22.5,22.5c0.779,0.78,1.812,1.17,2.829,1.17c1.021,0,2.05-0.39,2.83-1.17  C92.189,89.07,92.189,86.529,90.63,84.971z M40,68c-15.464,0-28-12.536-28-28s12.536-28,28-28s28,12.536,28,28S55.464,68,40,68z" id="_x3C_Path_x3E_" fill="#dbdbdb"/></svg>
+                                                </div>
+                                                <input placeholder="Your country" ng-model="country.long_name"></input>
+                                                <div class="clear">
+                                                    <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter-item event">
+                                            <div class="select">
+                                                <div class="icon">
+                                                    <svg enable-background="new 0 0 96 96" height="96px" id="magnifying_glass" version="1.1" viewBox="0 0 96 96" width="96px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M90.63,84.971l-22.5-22.5C73.05,56.311,76,48.5,76,40C76,20.12,59.88,4,40,4S4,20.12,4,40  s16.12,36,36,36c8.5,0,16.311-2.95,22.471-7.87l22.5,22.5c0.779,0.78,1.812,1.17,2.829,1.17c1.021,0,2.05-0.39,2.83-1.17  C92.189,89.07,92.189,86.529,90.63,84.971z M40,68c-15.464,0-28-12.536-28-28s12.536-28,28-28s28,12.536,28,28S55.464,68,40,68z" id="_x3C_Path_x3E_" fill="#dbdbdb"/></svg>
+                                                </div>
+                                                <input placeholder="Your city" ng-model="city.long_name"></input>
+                                                <div class="clear">
+                                                    <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter-item cost">
+                                            <div class="select">
+                                                <div class="icon">
+                                                    <svg height="78px" id="Layer_1" style="enable-background:new 0 0 78 78;" version="1.1" view-box="0 0 78 78" width="78px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M39,0C17.461,0,0,17.461,0,39s17.461,39,39,39s39-17.461,39-39S60.539,0,39,0z M39,72   C20.803,72,6,57.196,6,39S20.803,6,39,6s33,14.804,33,33S57.197,72,39,72z" style="fill:#333F4F;"/><path d="M54,45.401c0-2.139-0.553-4.014-1.641-5.57c-1.082-1.563-2.461-2.688-4.102-3.336   c-1.75-0.692-4.738-1.511-8.881-2.43c-2.664-0.588-3.447-1.085-3.838-1.454c-0.602-0.58-0.91-1.327-0.91-2.151   c0-1.233,0.594-3.311,4.582-3.311c2.047,0,3.709,0.581,4.949,1.729c0.41,0.384,0.768,0.846,1.074,1.349l0.012,0.014l0.063,0.115   c0.146,0.251,0.408,0.408,0.703,0.408h6.387c0.451,0,0.816-0.362,0.816-0.813c-0.002-0.136-0.117-0.547-0.238-0.871   c-1.699-4.448-5.045-7.014-10.201-7.867v-3.689c0-0.687-0.563-1.248-1.254-1.248h-5.004c-0.682,0-1.242,0.562-1.242,1.248v3.829   c-3.076,0.628-5.416,1.866-6.961,3.688c-1.73,2.077-2.58,4.38-2.58,7.044c0,2.39,0.766,4.44,2.334,6.287   c1.564,1.84,5.463,3.397,11.607,4.657c1.766,0.354,2.994,0.791,3.756,1.318c0.904,0.618,1.387,1.55,1.387,2.667   c0,1.491-0.891,3.254-5.115,3.254c-1.434,0-2.656-0.213-3.711-0.675c-1.482-0.628-2.611-1.705-3.34-3.212l-0.045-0.076   l-0.016-0.054c-0.135-0.264-0.412-0.438-0.715-0.438h-7.063c-0.443,0-0.814,0.368-0.814,0.785c0.01,0.121,0.066,0.374,0.064,0.383   c1.688,5.508,5.361,8.655,11.211,9.624v3.871c0,0.688,0.561,1.249,1.242,1.249h5.004c0.691,0,1.254-0.562,1.254-1.249v-3.865   c3.348-0.543,6.041-1.752,7.998-3.62C52.943,50.938,54,48.449,54,45.401z" style="fill:#333F4F;"/></g></svg>
+                                                </div>
+                                                <div class="title">{{selectedRange.name}}</div>
+                                            </div>
+                                            <div class="item-content">
+                                                <ul>
+                                                    <li ng-repeat="r in range" ng-click="rangeChange(r)">
+                                                        {{r.name}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="arrow-holder">
+                            <span href="#" class="logo">
+                                s
+                            </span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="modal restaurant-modal" id="restaurant-modal">
+                            <div class="scroll">
+                                <div class="box">
+                                <div class="close icon">
+                                    <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"></path></svg>
+                                </div>
+                                <div class="progress">
+                                    <ul class="progressbar">
+                                        <li class="active">Time</li>
+                                        <li>Book</li>
+                                        <li>Success</li>
+                                    </ul>
+                                    <div class="items">
+                                        <div class="item active" id="timeSloat">
+                                            <div class="content">
+                                                <h3>Time</h3>
+                                                <div class="stump-form" style="text-align:center">
+                                                    <div class="form">
+                                                        <div class="input">
+                                                            <label class="time-slot-label">{{selectedTimeSloat ? selectedTimeSloat.name : 'Select a time slot'}}</label>
+                                                             <div class="item-content time-slot">
+                                                                <ul>
+                                                                    <li ng-repeat="timeSlot in timeSlots" ng-click="timeSloatChange(timeSlot)">
+                                                                        {{timeSlot.name}}
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom clearfix">
+                                                    <div class="right-button">
+                                                        <button type="button transparent" class="btn btn-info next" ng-disabled="!selectedTimeSloat" ng-click="nextValidation('bookOrder')">
+                                                        <p>Next</p>
+                                                            <svg enable-background="new 0 0 96 96" height="96px" id="arrow_right" version="1.1" viewBox="0 0 96 96" width="96px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <path d="M12,52h62.344L52.888,73.456c-1.562,1.562-1.562,4.095-0.001,5.656c1.562,1.562,4.096,1.562,5.658,0l28.283-28.284l0,0  c0.186-0.186,0.352-0.391,0.498-0.609c0.067-0.101,0.114-0.21,0.172-0.315c0.066-0.124,0.142-0.242,0.195-0.373  c0.057-0.135,0.089-0.275,0.129-0.415c0.033-0.111,0.076-0.217,0.099-0.331C87.973,48.525,88,48.263,88,48l0,0  c0-0.003-0.001-0.006-0.001-0.009c-0.001-0.259-0.027-0.519-0.078-0.774c-0.024-0.12-0.069-0.231-0.104-0.349  c-0.039-0.133-0.069-0.268-0.123-0.397c-0.058-0.139-0.136-0.265-0.208-0.396c-0.054-0.098-0.097-0.198-0.159-0.292  c-0.146-0.221-0.314-0.427-0.501-0.614L58.544,16.888c-1.562-1.562-4.095-1.562-5.657-0.001c-1.562,1.562-1.562,4.095,0,5.658  L74.343,44L12,44c-2.209,0-4,1.791-4,4C8,50.209,9.791,52,12,52z"/>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item book" id="bookOrder">
+                                            <div class="content">
+                                                <h3>Details</h3>
+                                                <div class="stump-form">
+                                                    <div class="form">
+                                                        <div class="input" id="userName">
+                                                            <label for="email">Name</label>
+                                                            <div class="input-box">
+                                                                <input type="name" placeholder="name*" ng-model="userName">
+                                                                <div class="clear" ng-click="userName = ''">
+                                                                    <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"></path></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input" id="userEmail">
+                                                            <label for="email">Email</label>
+                                                            <div class="input-box">
+                                                                <input type="email" placeholder="email*" ng-model="userEmail">
+                                                                <div class="clear" ng-click="userEmail = ''">
+                                                                    <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"></path></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input" id="userNmuber">
+                                                            <label for="email">Contact Number</label>
+                                                            <div class="input-box">
+                                                                <input type="number" placeholder="contact number*" ng-model="userNmuber">
+                                                                <div class="clear" ng-click="userNmuber = ''">
+                                                                    <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"></path></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input">
+                                                            <button class="btn" ng-click="confirmTable()" id="bookBtn">Book</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom clearfix">
+                                                    <div class="left-button">
+                                                        <button type="button transparent" class="btn btn-info prev" ng-click="nextValidation('timeSloat')">Back</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item success-book" id="successBook">
+                                            <div class="content">
+                                                <h3>Success</h3>
+                                                <div class="stump-form">
+                                                    <div class="form">
+                                                        <div class="input" style="text-align:center;">
+                                                            <label class="success-text" for="email">Your seats have been booked successfully.</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom clearfix">
+                                                    <div class="left-button">
+                                                        <button type="button transparent" class="btn btn-info prev" ng-click="closeOrderModal()">Done</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="background"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="date-list">
+            <div class="items">
+                <div class="navigation">
+                    <div class="item" ng-click="previousRange()" ng-class="{'disabledNavigation' : startRange <= 0}">
+                        <svg enable-background="new 0 0 96 96" height="96px" id="arrow_left" version="1.1" viewBox="0 0 96 96" width="96px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M84,44H21.656l21.456-21.456c1.562-1.562,1.562-4.095,0.001-5.657c-1.562-1.562-4.096-1.562-5.658,0L9.172,45.171l0,0  c-0.186,0.186-0.352,0.391-0.498,0.61c-0.067,0.101-0.114,0.21-0.171,0.315c-0.067,0.124-0.142,0.242-0.196,0.373  c-0.056,0.135-0.088,0.276-0.129,0.416c-0.032,0.111-0.075,0.217-0.098,0.331C8.028,47.475,8,47.737,8,48l0,0  c0,0.003,0.001,0.005,0.001,0.008c0,0.259,0.027,0.519,0.078,0.774c0.024,0.121,0.069,0.232,0.104,0.349  c0.039,0.133,0.07,0.268,0.123,0.397c0.058,0.139,0.136,0.265,0.208,0.396c0.054,0.098,0.096,0.198,0.159,0.292  c0.147,0.221,0.314,0.427,0.501,0.614l28.282,28.281c1.562,1.562,4.095,1.562,5.657,0.001c1.562-1.562,1.562-4.096,0-5.658  L21.657,52H84c2.209,0,4-1.791,4-4S86.209,44,84,44z"/></svg>
+                    </div>
+                    <div class="item" ng-click="nextRange()" ng-class="{'disabledNavigation' : endRange > restaurants.length}">
+                        <svg enable-background="new 0 0 96 96" height="96px" id="arrow_right" version="1.1" viewBox="0 0 96 96" width="96px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12,52h62.344L52.888,73.456c-1.562,1.562-1.562,4.095-0.001,5.656c1.562,1.562,4.096,1.562,5.658,0l28.283-28.284l0,0  c0.186-0.186,0.352-0.391,0.498-0.609c0.067-0.101,0.114-0.21,0.172-0.315c0.066-0.124,0.142-0.242,0.195-0.373  c0.057-0.135,0.089-0.275,0.129-0.415c0.033-0.111,0.076-0.217,0.099-0.331C87.973,48.525,88,48.263,88,48l0,0  c0-0.003-0.001-0.006-0.001-0.009c-0.001-0.259-0.027-0.519-0.078-0.774c-0.024-0.12-0.069-0.231-0.104-0.349  c-0.039-0.133-0.069-0.268-0.123-0.397c-0.058-0.139-0.136-0.265-0.208-0.396c-0.054-0.098-0.097-0.198-0.159-0.292  c-0.146-0.221-0.314-0.427-0.501-0.614L58.544,16.888c-1.562-1.562-4.095-1.562-5.657-0.001c-1.562,1.562-1.562,4.095,0,5.658  L74.343,44L12,44c-2.209,0-4,1.791-4,4C8,50.209,9.791,52,12,52z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="event-list clearfix" ng-if="restaurants.length > 0">
+                    <div class="event caution" ng-repeat="restaurant in restaurants | slice: startRange : endRange">
+                        <div class="img">
+                            <img ng-if="restaurant.displayPhoto.icon" ng-src="{{restaurant.displayPhoto.icon}}" />
+                            <img ng-if="!restaurant.displayPhoto.icon" src="images/mic.jpg">
+                        </div>
+                        <div class="text">
+                            <h3>{{restaurant.name}}</h3>
+                            <p class="open-now">Open Now :</p>
+                            <div ng-class="restaurant.opening_hours.open_now ? 'yes' : 'no'">{{restaurant.opening_hours.open_now ? 'Yes' : 'No'}}</div>
+                            <p>{{restaurant.formatted_address}}</p>
+                            <div class="slots">
+                                <p ng-class="restaurant.rating >= 3.5 ? 'good' : restaurant.rating >= 1.5 ? 'warning' : 'danger'">Rating : <strong> {{restaurant.rating}}</strong></p>
+                            </div>
+                            <div class="info">
+                                <P>Time: 5pm to 11pm</P>
+                                <span>Available Seats : {{restaurant.availableSeat}} </span>
+                            </div>
+                            <div class="book-now-btn" ng-click="bookTable()">
+                                <p>BOOK NOW</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>© 2017 Restaurants Details. All rights reserved</p>
+        </footer>
+        <div class="spinner-holder" ng-style="!isLoading && {'display' : 'none'} ">
+            <svg class="spinner" width="50px" height="50px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+               <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+            </svg>
+        </div>
+    </div>
+
+

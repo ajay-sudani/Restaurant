@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="14px" viewBox="0 0 33 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+    <title>Select_inactive</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main" transform="translate(-899.000000, -667.000000)" fill="#C5C6C6">
+            <g id="Group-4-Copy" transform="translate(768.000000, 305.000000)">
+                <g id="Group-13" transform="translate(0.500000, 0.000000)">
+                    <g id="Group-2" transform="translate(0.000000, 97.000000)">
+                        <g id="Group-10" transform="translate(0.000000, 248.000000)">
+                            <path d="M153.027,26.07 C152.548,25.79 151.937,25.96 151.661,26.43 L145.266,37.51 L141.688,34.21 C141.31,33.81 140.677,33.79 140.274,34.17 C139.871,34.54 139.85,35.18 140.228,35.58 L144.8,39.8 C145.177,40.2 145.81,40.22 146.213,39.84 C146.335,39.73 153.393,27.43 153.393,27.43 C153.669,26.96 153.505,26.34 153.027,26.07 L153.027,26.07 Z M147,47 C139.268,47 133,40.73 133,33 C133,25.27 139.268,19 147,19 C154.732,19 161,25.27 161,33 C161,40.73 154.732,47 147,47 L147,47 Z M147,17 C138.164,17 131,24.16 131,33 C131,41.84 138.164,49 147,49 C155.836,49 163,41.84 163,33 C163,24.16 155.836,17 147,17 L147,17 Z" id="Select_inactive"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
